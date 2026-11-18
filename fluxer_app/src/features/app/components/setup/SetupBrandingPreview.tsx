@@ -7,7 +7,7 @@ import {getLocaleDirection} from '@app/features/i18n/utils/LocaleDirection';
 import {contrastRatio, getInstanceBrandVariables} from '@app/features/theme/utils/InstanceBrandColors';
 import {FluxerWordmark} from '@app/features/ui/components/icons/FluxerWordmark';
 import {SegmentedTabs} from '@app/features/ui/segmented_tabs/SegmentedTabs';
-import FluxerLogoAsset from '@app/media/images/fluxer-logo-color.svg?react';
+import ZoraMarkAsset from '@app/media/images/zora-mark.png';
 import {msg} from '@lingui/core/macro';
 import {useLingui} from '@lingui/react/macro';
 import {GlobeIcon, LockSimpleIcon, MinusIcon, SquareIcon, XIcon} from '@phosphor-icons/react';
@@ -245,10 +245,13 @@ function PreviewLogo({brand, className}: {brand: ResolvedPreviewBrand; className
 	}
 	if (brand.showBundledLogo) {
 		return (
-			<FluxerLogoAsset
+			<img
 				className={className}
+				src={ZoraMarkAsset}
+				alt=""
+				draggable={false}
 				aria-hidden="true"
-				data-flx="app.setup.setup-branding-preview.preview-logo.fluxer-logo-asset"
+				data-flx="app.setup.setup-branding-preview.preview-logo.zora-mark-asset"
 			/>
 		);
 	}
@@ -334,9 +337,12 @@ function SignInPreview({brand, highlight, onSelect}: SceneProps) {
 									data-flx="app.setup.setup-branding-preview.sign-in-preview.img"
 								/>
 							) : (
-								<FluxerLogoAsset
+								<img
+									src={ZoraMarkAsset}
+									alt=""
+									draggable={false}
 									aria-hidden="true"
-									data-flx="app.setup.setup-branding-preview.sign-in-preview.fluxer-logo-asset"
+									data-flx="app.setup.setup-branding-preview.sign-in-preview.zora-mark-asset"
 								/>
 							)}
 						</Hotspot>

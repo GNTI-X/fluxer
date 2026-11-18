@@ -3,8 +3,7 @@
 import {DEFAULT_APP_SHELL_BRANDING, resolveAppShellBranding} from '@app/features/app/state/AppShellBranding';
 import RuntimeConfig from '@app/features/app/state/RuntimeConfig';
 import {type BrandSvgProps, getDataFlx, getImageSizingProps} from '@app/features/ui/components/icons/BrandImageUtils';
-import FluxerWordmarkMonochromeAsset from '@app/media/images/fluxer-logo-wordmark-monochrome.svg?react';
-import FluxerWordmarkAsset from '@app/media/images/fluxer-wordmark.svg?react';
+import ZoraWordmarkAsset from '@app/media/images/zora-wordmark.svg?react';
 import {msg} from '@lingui/core/macro';
 import {useLingui} from '@lingui/react/macro';
 import {observer} from 'mobx-react-lite';
@@ -73,7 +72,9 @@ export const FluxerWordmark = observer(
 				</span>
 			);
 		}
-		const Asset = variant === 'monochrome' ? FluxerWordmarkMonochromeAsset : FluxerWordmarkAsset;
+		// The fork ships one Zora wordmark; keep accepting `variant` so callers do
+		// not break, but both variants resolve to the same radiant asset.
+		const Asset = variant === 'monochrome' ? ZoraWordmarkAsset : ZoraWordmarkAsset;
 		return <Asset role="img" aria-label={ariaLabel} data-flx="ui.icons.fluxer-wordmark.img" {...props} />;
 	},
 );

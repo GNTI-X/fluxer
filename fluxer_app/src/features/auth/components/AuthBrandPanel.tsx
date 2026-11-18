@@ -4,7 +4,7 @@ import styles from '@app/features/auth/components/AuthBrandPanel.module.css';
 import type {AuthBrand} from '@app/features/auth/InstanceBranding';
 import {FluxerWordmark, type WordmarkBranding} from '@app/features/ui/components/icons/FluxerWordmark';
 import {flxElementClassName} from '@app/lib/react';
-import FluxerLogoAsset from '@app/media/images/fluxer-logo-color.svg?react';
+import ZoraMarkAsset from '@app/media/images/zora-mark.png';
 import type React from 'react';
 import {useCallback, useMemo, useState} from 'react';
 
@@ -63,11 +63,15 @@ function renderLogo(logo: AuthBrandLogo | null, onLogoError: () => void): React.
 	}
 	if (logo.kind === 'bundled') {
 		return (
-			<FluxerLogoAsset
+			<img
 				className={styles.logo}
+				src={ZoraMarkAsset}
 				width={LOGO_BOX_PX}
 				height={LOGO_BOX_PX}
+				alt=""
 				aria-hidden="true"
+				draggable={false}
+				decoding="async"
 				data-flx="auth.components.auth-brand-panel.logo-bundled"
 			/>
 		);
@@ -121,7 +125,12 @@ export function AuthBrandPanel({brand, logo, onLogoError, layout}: AuthBrandPane
 		[brand.productName, wordmarkUrl],
 	);
 	const handleWordmarkError = useCallback(() => setFailedWordmarkUrl(brand.wordmarkUrl), [brand.wordmarkUrl]);
-	const wordmarkIsText = wordmarkUrl == null && !brand.usesDefaultName;
+	// A self-hosted instance often points both knobs at the same file. Drawing
+	// the logo and the wordmark then prints the brand twice above the card, so
+	// the duplicate is skipped and the single asset stands in for both.
+	const logoUrl = logo?.kind === 'image' ? logo.url : null;
+	const wordmarkDuplicatesLogo = logoUrl != null && brand.wordmarkUrl === logoUrl;
+	const wordmarkIsText = !wordmarkDuplicatesLogo && wordmarkUrl == null && !brand.usesDefaultName;
 	return (
 		<flx-auth-card-brand
 			className={flxElementClassName(
@@ -137,13 +146,15 @@ export function AuthBrandPanel({brand, logo, onLogoError, layout}: AuthBrandPane
 				data-flx="auth.components.auth-brand-panel.identity"
 			>
 				{renderLogo(logo, onLogoError)}
-				<FluxerWordmark
-					className={styles.wordmark}
-					style={WORDMARK_TEXT_STYLE}
-					branding={wordmarkBranding}
-					onImageError={handleWordmarkError}
-					data-flx="auth.components.auth-brand-panel.wordmark"
-				/>
+				{wordmarkDuplicatesLogo ? null : (
+					<FluxerWordmark
+						className={styles.wordmark}
+						style={WORDMARK_TEXT_STYLE}
+						branding={wordmarkBranding}
+						onImageError={handleWordmarkError}
+						data-flx="auth.components.auth-brand-panel.wordmark"
+					/>
+				)}
 			</flx-auth-card-brand-identity>
 			{brand.host == null ? null : (
 				<span className={styles.host} dir="ltr" data-flx="auth.components.auth-brand-panel.host">

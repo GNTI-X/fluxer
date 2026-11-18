@@ -2,6 +2,7 @@
 
 import {PRODUCT_NAME} from '@app/features/app/config/ProductConstants';
 import type {RuntimeConfigSnapshot} from '@app/features/app/state/RuntimeConfigSnapshot';
+import ZoraAuthBackdrop from '@app/media/images/zora-auth-backdrop.jpg';
 import {isOfficialInstanceHost} from '@fluxer/instance_bootstrap/src/OfficialInstance';
 
 type BrandingSnapshot = Pick<
@@ -138,7 +139,9 @@ export function resolveAuthBrand(snapshot: BrandingSnapshot, options: AuthBrandO
 		usesDefaultName: productName === PRODUCT_NAME,
 		logoCandidates,
 		wordmarkUrl: resolveUrl(branding.wordmark_url),
-		backdropUrl: isOfficial ? null : resolveUrl(branding.sign_in_backdrop_url),
+		// The fork carries its own backdrop so a venue nobody branded yet still
+		// looks like Zora instead of a bare gradient. An explicit setting wins.
+		backdropUrl: isOfficial ? null : (resolveUrl(branding.sign_in_backdrop_url) ?? ZoraAuthBackdrop),
 		host,
 		isOfficial,
 	};

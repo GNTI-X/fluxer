@@ -88,6 +88,7 @@ import {
 	type InstantAccountAvailability,
 	type LegacyDateOfBirthEnforcement,
 	LegacyDateOfBirthEnforcements,
+	RegistrationModes,
 } from '@fluxer/constants/src/AccountConfigConstants';
 import {
 	type AccountIdentity,
@@ -3235,7 +3236,19 @@ export class InstanceConfigRepository {
 
 	async getRegistrationConfig(): Promise<InstanceRegistrationConfig> {
 		const raw = await this.getConfig(REGISTRATION_CONFIG_KEY);
-		return parseStoredRegistrationConfig(raw);
+		const config = parseStoredRegistrationConfig(raw);
+		// Zora deployments are invite-only. The instance config row defaults to
+		// `open`, and the admin console can flip it back, so the operator's pin
+		// wins over the stored value when FLUXER_REGISTRATION_MODE is set.
+		const pinned = (process.env.FLUXER_REGISTRATION_MODE ?? '').trim().toLowerCase();
+		if (
+			pinned === RegistrationModes.OPEN ||
+			pinned === RegistrationModes.APPROVAL ||
+			pinned === RegistrationModes.CLOSED
+		) {
+			return {...config, mode: pinned};
+		}
+		return config;
 	}
 
 	setRegistrationConfig(config: Partial<InstanceRegistrationConfig>): Promise<InstanceRegistrationConfig> {
