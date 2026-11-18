@@ -20,7 +20,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GHCR_OWNER: ${{ github.repository_owner }}
+  # GHCR rejects uppercase repository names, and the org is GNTI-X.
+  GHCR_OWNER: gnti-x
 
 jobs:
   approve:
@@ -67,7 +68,7 @@ jobs:
       contents: read
       packages: write
     env:
-      IMAGE_REPO: ghcr.io/${{ github.repository_owner }}/fluxer-app-proxy-self-hosted
+      IMAGE_REPO: ghcr.io/gnti-x/fluxer-app-proxy-self-hosted
       BUILD_VERSION: ${{ needs.meta.outputs.build_version }}
       PUBLIC_ASSET_BASE_URL: ""
       BUNDLE_LOCAL_ASSETS: "true"

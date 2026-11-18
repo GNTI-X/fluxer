@@ -36,7 +36,8 @@ defaults:
     shell: bash
 
 env:
-  GHCR_OWNER: ${{ github.repository_owner }}
+  # GHCR rejects uppercase repository names, and the org is GNTI-X.
+  GHCR_OWNER: gnti-x
 
 jobs:
   meta:
