@@ -12,7 +12,7 @@ import {useLingui} from '@lingui/react/macro';
 import {observer} from 'mobx-react-lite';
 
 const ANDROID_APP_MESSAGE_DESCRIPTOR = msg({
-	message: 'You can get the Fluxer app for Android on {googlePlay} and chat from your phone.',
+	message: 'You can get the Zora app for Android on {googlePlay} and chat from your phone.',
 	comment:
 		'Nagbar body telling people that the Fluxer app for Android phones can be installed from Google Play. {googlePlay} is the store brand name Google Play and must stay as is. Keep Fluxer and Android untranslated. Keep the tone calm and plain.',
 });
