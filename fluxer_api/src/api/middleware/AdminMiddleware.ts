@@ -2,7 +2,7 @@
 
 import {type AdminAuditAttribution, runWithAdminAuditAttribution} from '@app/api/admin/AdminAuditAttribution';
 import {isOperatorRequest, readOperatorHostUser} from '@app/api/admin/operator/OperatorRequests';
-import {createApplicationID, createUserID} from '@app/api/BrandedTypes';
+import {type ApplicationID, createApplicationID, createUserID} from '@app/api/BrandedTypes';
 import {assertMutableUserId} from '@app/api/constants/Core';
 import {Logger} from '@app/api/Logger';
 import type {User} from '@app/api/models/User';
@@ -21,8 +21,25 @@ const ADMIN_OAUTH2_APPLICATION_ID_BRANDED = createApplicationID(ADMIN_OAUTH2_APP
 type AdminAuthTokenType = 'bearer' | 'session' | 'admin_api_key' | 'operator';
 const ADMIN_TARGET_USER_PARAMS = ['user_id', 'target_user_id'] as const;
 
+/**
+ * The OAuth2 application allowed to act on the admin API with a bearer token.
+ *
+ * Upstream hard-codes the id of the application its own `rexctl` seeds. A
+ * self-hosted venue registers its admin console as an ordinary application and
+ * so gets an ordinary snowflake id, which used to fail this check with a bare
+ * 403 on every admin page. `FLUXER_ADMIN_OAUTH_CLIENT_ID` names that
+ * application; without it the upstream constant still applies.
+ */
+const ADMIN_BEARER_APPLICATION_ID: ApplicationID = (() => {
+	const configured = process.env.FLUXER_ADMIN_OAUTH_CLIENT_ID?.trim();
+	if (configured && /^[0-9]+$/.test(configured)) {
+		return createApplicationID(BigInt(configured));
+	}
+	return ADMIN_OAUTH2_APPLICATION_ID_BRANDED;
+})();
+
 function ensureBearerIsBuiltInAdminApplication(ctx: Context<HonoEnv>): void {
-	if (ctx.get('oauthBearerApplicationId') !== ADMIN_OAUTH2_APPLICATION_ID_BRANDED) {
+	if (ctx.get('oauthBearerApplicationId') !== ADMIN_BEARER_APPLICATION_ID) {
 		throw new AccessDeniedError();
 	}
 }
