@@ -109,13 +109,13 @@ export const ASSET_COPY: Record<SetupBrandingAssetKind, AssetCopy> = {
 		}),
 		help: msg({
 			message:
-				'The large image next to the sign-in form, which is always dark. On a phone it only shows next to the name, when there is no wordmark and the product name is not Fluxer. Use a square or wide PNG or SVG in light colors with a transparent background, at least 256 pixels tall and up to {size}.',
+				'The large image next to the sign-in form, which is always dark. On a phone it only shows next to the name, when there is no wordmark and the product name is not Zora. Use a square or wide PNG or SVG in light colors with a transparent background, at least 256 pixels tall and up to {size}.',
 			comment:
 				'Where the logo branding image appears and the recommended format, in the setup wizard. size is a file size such as 10 MB.',
 		}),
 		empty: msg({
 			message:
-				'If you leave it empty, the sign-in page uses your app icon or symbol. Without those, it shows the Fluxer logo while the product name is Fluxer, and no image for any other name.',
+				'If you leave it empty, the sign-in page uses your app icon or symbol. Without those, it shows the Zora logo while the product name is Zora, and no image for any other name.',
 			comment: 'What the app shows when no logo is set, in the setup wizard.',
 		}),
 		minWidth: 0,
@@ -135,7 +135,7 @@ export const ASSET_COPY: Record<SetupBrandingAssetKind, AssetCopy> = {
 		}),
 		empty: msg({
 			message:
-				'If you leave it empty, the product name shows as plain text, or as the Fluxer wordmark while the product name is Fluxer.',
+				'If you leave it empty, the product name shows as plain text, or as the Zora wordmark while the product name is Zora.',
 			comment: 'What the app shows when no wordmark is set, in the setup wizard.',
 		}),
 		minWidth: 0,
@@ -176,7 +176,7 @@ export const ASSET_COPY: Record<SetupBrandingAssetKind, AssetCopy> = {
 				'Where the app icon branding image appears and the recommended format, in the setup wizard. size is a file size such as 10 MB.',
 		}),
 		empty: msg({
-			message: 'If you leave it empty, those places show the Fluxer icon.',
+			message: 'If you leave it empty, those places show the Zora icon.',
 			comment: 'What the app shows when no app icon is set, in the setup wizard.',
 		}),
 		minWidth: 512,
@@ -213,7 +213,7 @@ export const ASSET_COPY: Record<SetupBrandingAssetKind, AssetCopy> = {
 				'Where the favicon appears and the recommended format, in the setup wizard. size is a file size such as 10 MB.',
 		}),
 		empty: msg({
-			message: 'If you leave it empty, the tab uses your app icon, or the Fluxer icon if that is empty too.',
+			message: 'If you leave it empty, the tab uses your app icon, or the Zora icon if that is empty too.',
 			comment: 'What the app shows when no favicon is set, in the setup wizard.',
 		}),
 		minWidth: 64,

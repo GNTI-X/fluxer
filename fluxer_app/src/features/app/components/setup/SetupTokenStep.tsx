@@ -31,13 +31,13 @@ const SETUP_TOKEN_BODY_DESCRIPTOR = msg({
 });
 const SETUP_TOKEN_HELP_DESCRIPTOR = msg({
 	message:
-		'If you installed Fluxer with rexctl, it printed the token when it finished. Run this on your server to show it again.',
+		'If you installed Zora with rexctl, it printed the token when it finished. Run this on your server to show it again.',
 	comment:
 		'Help on the setup token screen, followed by a terminal command. rexctl is a name that must not be translated.',
 });
 const SETUP_TOKEN_LOST_DESCRIPTOR = msg({
 	message:
-		'If you run Fluxer without rexctl, set FLUXER_SETUP_TOKEN to a value of at least 32 characters that you choose, restart Fluxer, and enter that value here.',
+		'If you run Zora without rexctl, set FLUXER_SETUP_TOKEN to a value of at least 32 characters that you choose, restart Zora, and enter that value here.',
 	comment:
 		'Help on the setup token screen for someone who installed Fluxer without rexctl. FLUXER_SETUP_TOKEN and rexctl must not be translated.',
 });

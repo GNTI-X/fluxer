@@ -27,7 +27,7 @@ import {PlusIcon, TrashIcon} from '@phosphor-icons/react';
 import {type MouseEvent, type ReactNode, useCallback} from 'react';
 
 const USE_OFFICIAL_INSTANCE_DESCRIPTOR = msg({
-	message: 'Use the official Fluxer instance',
+	message: 'Use the official Zora instance',
 	comment: 'Accessible label for the official Fluxer instance option.',
 });
 const USE_INSTANCE_DESCRIPTOR = msg({

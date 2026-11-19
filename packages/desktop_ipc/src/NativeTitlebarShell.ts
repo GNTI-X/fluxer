@@ -16,7 +16,7 @@ export const NATIVE_TITLEBAR_CLASS = {
 	controlClose: 'fluxer-native-titlebar__control--close',
 } as const;
 
-const NATIVE_TITLEBAR_DEFAULT_PRODUCT_NAME = 'Fluxer';
+const NATIVE_TITLEBAR_DEFAULT_PRODUCT_NAME = 'Zora';
 
 const NATIVE_TITLEBAR_WORDMARK_VIEWBOX = '0 0 1374 366';
 

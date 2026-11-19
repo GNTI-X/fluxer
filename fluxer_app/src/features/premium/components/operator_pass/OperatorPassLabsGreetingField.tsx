@@ -14,13 +14,13 @@ export const LABS_GREETING_LABEL_DESCRIPTOR = msg({
 });
 const LABS_GREETING_HINT_DESCRIPTOR = msg({
 	message:
-		'We add you to Fluxer Labs when your pass is delivered, unless you left or were removed from Fluxer Labs before. With this on, we welcome you by name in #operators soon after.',
+		'We add you to Zora Labs when your pass is delivered, unless you left or were removed from Zora Labs before. With this on, we welcome you by name in #operators soon after.',
 	comment:
 		'Hint under the checkbox or switch "Welcome me in #operators". Fluxer Labs is the name of a community on Fluxer, keep it as is. #operators is a channel there, keep it as is. Left or were removed from Fluxer Labs before means the person left the Fluxer Labs community, or was removed from it, at any time in the past.',
 });
 const LABS_GREETING_VISIONARY_HINT_DESCRIPTOR = msg({
 	message:
-		'We add you to Fluxer Labs when you turn on your pass, unless you left or were removed from Fluxer Labs before. With this on, we welcome you by name in #operators soon after.',
+		'We add you to Zora Labs when you turn on your pass, unless you left or were removed from Zora Labs before. With this on, we welcome you by name in #operators soon after.',
 	comment:
 		'Hint under the checkbox "Welcome me in #operators" in the dialog where a Visionary turns on the Operator Pass that comes with Visionary. Turn on your pass means the button in that dialog that switches the pass on, nothing is bought. Fluxer Labs is the name of a community on Fluxer, keep it as is. #operators is a channel there, keep it as is. Left or were removed from Fluxer Labs before means the person left the Fluxer Labs community, or was removed from it, at any time in the past.',
 });

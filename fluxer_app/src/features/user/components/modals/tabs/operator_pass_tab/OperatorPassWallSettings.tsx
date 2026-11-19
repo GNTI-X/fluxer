@@ -81,7 +81,7 @@ const WALL_RELEASE_LIST_DESCRIPTOR = msg({
 });
 const WALL_RELEASE_LIST_HINT_DESCRIPTOR = msg({
 	message:
-		"Each yearly list of Operators that we publish goes into the notes of a Fluxer release and a file in its source code. Your wall name is only on it if you turn this on. If you ask us to remove it later, we take it out of future lists, the release notes and that file, but earlier versions of the source code and copies others made can't be recalled.",
+		"Each yearly list of Operators that we publish goes into the notes of a Zora release and a file in its source code. Your wall name is only on it if you turn this on. If you ask us to remove it later, we take it out of future lists, the release notes and that file, but earlier versions of the source code and copies others made can't be recalled.",
 	comment:
 		"Description under the switch that adds the Operators' wall name to the yearly Operators list. A Fluxer release is a published version of the app. Operators are the people who have an Operator Pass, keep the word Operators in English.",
 });

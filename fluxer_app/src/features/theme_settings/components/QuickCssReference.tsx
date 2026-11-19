@@ -42,7 +42,7 @@ const SELECT_VARIABLE_HINT_DESCRIPTOR = msg({
 	comment: 'Shown above the list of CSS variables in the "Reference" tab of the quick CSS editor.',
 });
 const STABLE_ATTRIBUTES_DESCRIPTOR = msg({
-	message: "These attributes don't change between Fluxer updates.",
+	message: "These attributes don't change between Zora updates.",
 	comment: 'Shown above the list of CSS attributes in the "Reference" tab of the quick CSS editor.',
 });
 const ON_SCREEN_DESCRIPTOR = msg({

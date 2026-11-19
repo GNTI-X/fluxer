@@ -21,7 +21,7 @@ const PASSKEY_ALREADY_REGISTERED_DESCRIPTOR = msg({
 });
 const PASSKEY_NO_AUTHENTICATOR_DESCRIPTOR = msg({
 	message:
-		"Fluxer couldn't find a security key on this computer. Connect your security key and try again, or open Fluxer in your web browser and use your passkey there.",
+		"Zora couldn't find a security key on this computer. Connect your security key and try again, or open Zora in your web browser and use your passkey there.",
 	comment:
 		'Error shown in the desktop app when a passkey prompt starts but no security key is connected to the computer.',
 });

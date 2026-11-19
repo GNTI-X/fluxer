@@ -16,7 +16,7 @@ use super::layout_scripts::{
 };
 use super::layout_sidebar::render_sidebar;
 
-const DEFAULT_PRODUCT_NAME: &str = "Fluxer";
+const DEFAULT_PRODUCT_NAME: &str = "Zora";
 const LIGHT_SCHEME_MEDIA: &str = "(prefers-color-scheme: light)";
 const DARK_SCHEME_MEDIA: &str = "(prefers-color-scheme: dark)";
 

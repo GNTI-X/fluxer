@@ -70,7 +70,7 @@ const SHARED_USERNAMES_YES_NAME_DESCRIPTOR = msg({
 	comment: 'Setup wizard option where usernames get a random number so several people can share a name.',
 });
 const SHARED_USERNAMES_YES_DESC_DESCRIPTOR = msg({
-	message: 'Fluxer adds a random number to each username, like alex#4821, so many people can use the same name.',
+	message: 'Zora adds a random number to each username, like alex#4821, so many people can use the same name.',
 	comment: 'Description of the shared usernames option in the setup wizard. Keep the example alex#4821 as it is.',
 });
 

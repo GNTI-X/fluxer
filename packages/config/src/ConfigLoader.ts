@@ -195,7 +195,7 @@ function defaultConfig(): MasterConfig {
 			profile_pseudonym_secret: '',
 			sso_allow_private_addresses: false,
 			passkeys: {
-				rp_name: 'Fluxer',
+				rp_name: 'Zora',
 				rp_id: '',
 				additional_allowed_origins: DEFAULT_PASSKEY_ORIGINS,
 			},
@@ -206,7 +206,7 @@ function defaultConfig(): MasterConfig {
 			},
 			bluesky: {
 				enabled: false,
-				client_name: 'Fluxer',
+				client_name: 'Zora',
 				client_uri: '',
 				logo_uri: '',
 				tos_uri: '',
@@ -293,7 +293,7 @@ function defaultConfig(): MasterConfig {
 		instance: {
 			self_hosted: false,
 			branding: {
-				product_name: 'Fluxer',
+				product_name: 'Zora',
 			},
 			setup: {
 				configured: false,

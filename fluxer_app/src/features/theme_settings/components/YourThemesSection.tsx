@@ -84,7 +84,7 @@ const FOLDER_LIMIT_DESCRIPTOR = msg({
 	comment: 'Error toast in "Your themes" when importing a folder while the most folders are already watched.',
 });
 const FOLDER_UNREADABLE_DESCRIPTOR = msg({
-	message: "Fluxer can't read this folder.",
+	message: "Zora can't read this folder.",
 	comment: 'Error toast in "Your themes" when the chosen theme folder cannot be opened.',
 });
 const NO_THEMES_MATCH_YOUR_SEARCH_DESCRIPTOR = msg({
@@ -169,11 +169,11 @@ const WATCHING_FOLDER_DESCRIPTOR = msg({
 		'Shown for a watched theme folder in Settings > Themes on the desktop app. {path} is the full path of the folder. New, changed, renamed and deleted CSS files in it update the themes.',
 });
 const FOLDER_MISSING_DESCRIPTOR = msg({
-	message: "Fluxer can't find this folder. It will load the themes again when the folder is back.",
+	message: "Zora can't find this folder. It will load the themes again when the folder is back.",
 	comment: 'Shown for a watched theme folder in Settings > Themes when the folder was moved, deleted or disconnected.',
 });
 const FOLDER_NOT_ALLOWED_DESCRIPTOR = msg({
-	message: "Fluxer can't open this folder. Import it again to keep watching it.",
+	message: "Zora can't open this folder. Import it again to keep watching it.",
 	comment:
 		'Shown for a watched theme folder in Settings > Themes when the desktop app no longer has permission to read it.',
 });

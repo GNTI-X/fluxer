@@ -35,7 +35,7 @@ const SIGN_IN_LOGOS: [(&str, &str); 3] = [
     ICON_URL,
     ("symbol_url", "FLUXER_APP_SYMBOL_URL"),
 ];
-const DEFAULT_PRODUCT_NAME: &str = "Fluxer";
+const DEFAULT_PRODUCT_NAME: &str = "Zora";
 const FAVICON_URL: (&str, &str) = ("favicon_url", "FLUXER_APP_FAVICON_URL");
 const FAVICON_DARK_URL: (&str, &str) = ("favicon_dark_url", "FLUXER_APP_FAVICON_DARK_URL");
 const THEME_COLOR: (&str, &str) = ("theme_color", "FLUXER_APP_THEME_COLOR");

@@ -46,7 +46,7 @@ export const TRY_A_DIFFERENT_NAME_OR_CLEAR_THE_SEARCH_DESCRIPTOR = msg({
 });
 export const TRUSTED_SITE_WARNING_DESCRIPTOR = msg({
 	message:
-		"Only trust sites you know. A site you trust can see your IP address, when you have Fluxer open and some of what's on your screen.",
+		"Only trust sites you know. A site you trust can see your IP address, when you have Zora open and some of what's on your screen.",
 	comment:
 		'Warning in Settings > Themes and in the modal that applies a shared theme. Trusting a site lets quick CSS and themes load images from it, and CSS can make the browser load different images depending on what the app shows.',
 });

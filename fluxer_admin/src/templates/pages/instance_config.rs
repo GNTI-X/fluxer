@@ -581,7 +581,7 @@ fn push_relay_section(
         .unwrap_or("Nobody");
     section_card_with_description(
         "Push Relay",
-        "Official mobile app notifications travel through Fluxer's relay to Apple and Google. \
+        "Push notifications for mobile apps travel through a relay to Apple and Google. \
          The relay delivers them only after an operator accepts its privacy notice.",
         html! {
             form method="post" action={(base) "/instance-config?action=update_push_relay"} {

@@ -89,7 +89,7 @@ const OPEN_IN_NEW_WINDOW_DESCRIPTOR = msg({
 	comment: 'Button in the quick CSS editor header that moves the editor into its own window.',
 });
 const MOVE_BACK_INTO_FLUXER_DESCRIPTOR = msg({
-	message: 'Move back into Fluxer',
+	message: 'Move back into Zora',
 	comment: 'Button in the quick CSS editor window that moves the editor back into a panel inside the app.',
 });
 

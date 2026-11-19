@@ -77,11 +77,11 @@ const SMTP_TLS_NONE_DESCRIPTOR = msg({
 	comment: 'SMTP encryption option that never encrypts the connection.',
 });
 const SMTP_FAILED_DESCRIPTOR = msg({
-	message: 'Fluxer couldn\'t connect to {host}. The server said: "{error}"',
+	message: 'Zora couldn\'t connect to {host}. The server said: "{error}"',
 	comment: 'Alert when the SMTP check fails. host is the mail server address and error is its reply.',
 });
 const SMTP_FAILED_NO_REPLY_DESCRIPTOR = msg({
-	message: "Fluxer couldn't connect to {host}.",
+	message: "Zora couldn't connect to {host}.",
 	comment: 'Alert when the SMTP check fails and the mail server sent no reply. host is the mail server address.',
 });
 const SMTP_SAVE_ANYWAY_DESCRIPTOR = msg({

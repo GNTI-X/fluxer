@@ -55,7 +55,7 @@ const OPEN_IN_THEMES_DESCRIPTOR = msg({
 	comment: 'Button in the modal that applied a shared theme. Opens Settings > Themes.',
 });
 const BLOCKED_FILES_DESCRIPTOR = msg({
-	message: "Fluxer won't load {count, plural, one {# file} other {# files}} that this theme links to on other sites.",
+	message: "Zora won't load {count, plural, one {# file} other {# files}} that this theme links to on other sites.",
 	comment: 'Shown in the modal that applies a shared theme when the theme points at files the app will not load.',
 });
 const UNTRUSTED_SITES_DESCRIPTOR = msg({

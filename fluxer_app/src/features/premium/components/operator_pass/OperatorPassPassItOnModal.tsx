@@ -104,7 +104,7 @@ const OFFER_UNAVAILABLE_DESCRIPTOR = msg({
 		'Error when an Operator Pass cannot be offered to the chosen account right now. Operator Pass is a product name and stays untranslated.',
 });
 const NOT_FRIEND_DESCRIPTOR = msg({
-	message: 'You can only pass this on to one of your friends on Fluxer.',
+	message: 'You can only pass this on to one of your friends on Zora.',
 	comment: 'Error when you try to pass an Operator Pass on to someone you are not friends with.',
 });
 const NO_FRIENDS_DESCRIPTOR = msg({

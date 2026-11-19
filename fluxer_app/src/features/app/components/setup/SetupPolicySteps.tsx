@@ -131,12 +131,12 @@ const REGISTRATION_OPEN_NOTE_DESCRIPTOR = msg({
 });
 
 const PUSH_TITLE_DESCRIPTOR = msg({
-	message: 'Send notifications to the Fluxer mobile apps?',
+	message: 'Send notifications to the Zora mobile apps?',
 	comment: 'Setup wizard title for the push relay consent.',
 });
 const PUSH_BODY_DESCRIPTOR = msg({
 	message:
-		'The Fluxer apps for iOS and Android get notifications through a push relay that Fluxer runs, which passes them to Apple and Google. To use it, you accept the push relay privacy notice.',
+		'The Zora apps for iOS and Android get notifications through a push relay that Zora runs, which passes them to Apple and Google. To use it, you accept the push relay privacy notice.',
 	comment: 'Setup wizard body explaining the push relay.',
 });
 const PUSH_NOTICE_LINK_DESCRIPTOR = msg({
@@ -145,7 +145,7 @@ const PUSH_NOTICE_LINK_DESCRIPTOR = msg({
 });
 const PUSH_NO_DESC_DESCRIPTOR = msg({
 	message:
-		"People using the Fluxer mobile apps won't get notifications from your instance. You can turn this on later in the admin panel.",
+		"People using the Zora mobile apps won't get notifications from your instance. You can turn this on later in the admin panel.",
 	comment: 'Description of leaving the push relay off in the setup wizard.',
 });
 

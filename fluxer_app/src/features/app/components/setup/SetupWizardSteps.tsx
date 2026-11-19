@@ -28,7 +28,7 @@ const WELCOME_HEADING_DESCRIPTOR = msg({
 });
 const WELCOME_BODY_DESCRIPTOR = msg({
 	message:
-		"This sets up your instance, the copy of Fluxer you installed, and creates your account on it. It takes about five minutes. You can change most choices later in the admin panel, and a screen tells you when you can't.",
+		"This sets up your instance, the copy of Zora you installed, and creates your account on it. It takes about five minutes. You can change most choices later in the admin panel, and a screen tells you when you can't.",
 	comment:
 		'Body of the first setup wizard screen. An instance is one installation of Fluxer run by the person reading this.',
 });
@@ -63,7 +63,7 @@ const LOCK_SETUP_CONFIGURED_DESCRIPTOR = msg({
 	comment: 'Setup wizard explanation of why the sign-in method is fixed: the configuration says setup is done.',
 });
 const LOCK_EXISTING_INSTANCE_DESCRIPTOR = msg({
-	message: 'This instance was upgraded from a version of Fluxer that used email sign-in, so it stays on email.',
+	message: 'This instance was upgraded from a version of Zora that used email sign-in, so it stays on email.',
 	comment: 'Setup wizard explanation of why the sign-in method is fixed: the instance is older than username sign-in.',
 });
 const LOCK_UNKNOWN_DESCRIPTOR = msg({

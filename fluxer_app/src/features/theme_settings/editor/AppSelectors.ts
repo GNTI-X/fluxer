@@ -119,7 +119,7 @@ export const SEMANTIC_ATTRIBUTES: ReadonlyArray<SemanticAttribute> = [
 	{
 		name: 'data-flx-system',
 		description: msg({
-			message: 'Set on messages that Fluxer sends, such as when someone joins.',
+			message: 'Set on messages that Zora sends, such as when someone joins.',
 			comment: 'Describes a CSS attribute in the "Reference" tab of the quick CSS editor.',
 		}),
 	},

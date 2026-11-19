@@ -45,7 +45,7 @@ const CAPTION_SIGN_IN_DESCRIPTOR = msg({
 	comment: 'Caption under the sign-in page preview in the setup wizard branding step.',
 });
 const CAPTION_PHONE_DESCRIPTOR = msg({
-	message: 'The sign-in page on a phone, in a mobile browser or the Fluxer mobile app.',
+	message: 'The sign-in page on a phone, in a mobile browser or the Zora mobile app.',
 	comment: 'Caption under the phone preview in the setup wizard branding step.',
 });
 const CAPTION_DESKTOP_DESCRIPTOR = msg({

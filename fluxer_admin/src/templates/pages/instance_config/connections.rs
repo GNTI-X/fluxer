@@ -84,7 +84,7 @@ fn provider_card(index: usize, provider: Option<&ConnectionProviderResponse>) ->
                     "Issuer URL",
                     &text(provider.and_then(|p| p.issuer.as_ref())),
                     "https://id.example.com/realms/main",
-                    "OpenID Connect only. Fluxer finds the other URLs from it.",
+                    "OpenID Connect only. Zora finds the other URLs from it.",
                 ))
                 (helped_input(
                     &field("authorization_url"),

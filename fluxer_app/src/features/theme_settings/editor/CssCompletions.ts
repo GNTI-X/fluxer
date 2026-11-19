@@ -66,7 +66,7 @@ const SUPPORTS_DESCRIPTOR = msg({
 	comment: 'Completion in the quick CSS editor that inserts an @supports rule.',
 });
 const ROOT_DESCRIPTOR = msg({
-	message: 'Change Fluxer variables',
+	message: 'Change Zora variables',
 	comment: 'Completion in the quick CSS editor that inserts a :root rule, where theme variables are set.',
 });
 const ASSET_DESCRIPTOR = msg({
